@@ -1,11 +1,11 @@
 <template>
   <div>
-    <nav>
+    <!-- <nav>
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link> |
       <router-link to="/login">login</router-link>
-    </nav>
-    <router-view />
+    </nav> -->
+    <router-view class="rotter-view"/>
   </div>
 </template>
 
@@ -14,4 +14,9 @@
 <style scoped lang="scss">
 @use '@/styles/_variables' as *;
 @use '@/styles/_mixins' as *;
+
+.rotter-view{
+  width:100vw;
+  height: 100vh;
+}
 </style>

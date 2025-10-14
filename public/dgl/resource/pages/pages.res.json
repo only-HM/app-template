@@ -1,0 +1,301 @@
+[
+  {
+    "type": "image",
+    "id": "_$1",
+    "src": "resource/pages/i0.png"
+  },
+  {
+    "type": "image",
+    "id": "_$3",
+    "src": "resource/pages/i1.png"
+  },
+  {
+    "type": "image",
+    "id": "_$5",
+    "src": "resource/pages/i2.png"
+  },
+  {
+    "type": "image",
+    "id": "_$7",
+    "src": "resource/pages/i3.png"
+  },
+  {
+    "type": "image",
+    "id": "_$9",
+    "src": "resource/pages/i4.png"
+  },
+  {
+    "type": "image",
+    "id": "_$16",
+    "src": "resource/pages/i5.png"
+  },
+  {
+    "type": "image",
+    "id": "_$18",
+    "src": "resource/pages/i6.png"
+  },
+  {
+    "type": "image",
+    "id": "_$20",
+    "src": "resource/pages/i7.png"
+  },
+  {
+    "type": "image",
+    "id": "_$23",
+    "src": "resource/pages/i8.png"
+  },
+  {
+    "type": "image",
+    "id": "_$25",
+    "src": "resource/pages/i9.png"
+  },
+  {
+    "type": "image",
+    "id": "_$28",
+    "src": "resource/pages/i10.png"
+  },
+  {
+    "type": "image",
+    "id": "_$30",
+    "src": "resource/pages/i11.png"
+  },
+  {
+    "type": "image",
+    "id": "_$32",
+    "src": "resource/pages/i12.png"
+  },
+  {
+    "type": "image",
+    "id": "_$36",
+    "src": "resource/pages/i13.png"
+  },
+  {
+    "type": "image",
+    "id": "_$38",
+    "src": "resource/pages/i14.png"
+  },
+  {
+    "type": "image",
+    "id": "_$40",
+    "src": "resource/pages/i15.png"
+  },
+  {
+    "type": "image",
+    "id": "_$44",
+    "src": "resource/pages/i16.png"
+  },
+  {
+    "type": "image",
+    "id": "_$48",
+    "src": "resource/pages/i17.png"
+  },
+  {
+    "type": "image",
+    "id": "_$50",
+    "src": "resource/pages/i18.png"
+  },
+  {
+    "type": "image",
+    "id": "_$54",
+    "src": "resource/pages/i19.png"
+  },
+  {
+    "type": "image",
+    "id": "_$56",
+    "src": "resource/pages/i20.png"
+  },
+  {
+    "type": "image",
+    "id": "_$59",
+    "src": "resource/pages/i21.png"
+  },
+  {
+    "type": "image",
+    "id": "_$63",
+    "src": "resource/pages/i22.png"
+  },
+  {
+    "type": "image",
+    "id": "_$66",
+    "src": "resource/pages/i23.png"
+  },
+  {
+    "type": "image",
+    "id": "_$70",
+    "src": "resource/pages/i24.png"
+  },
+  {
+    "type": "image",
+    "id": "_$72",
+    "src": "resource/pages/i25.png"
+  },
+  {
+    "type": "image",
+    "id": "_$75",
+    "src": "resource/pages/i26.png"
+  },
+  {
+    "type": "image",
+    "id": "_$76",
+    "src": "resource/pages/i27.png"
+  },
+  {
+    "type": "image",
+    "id": "_$77",
+    "src": "resource/pages/i28.png"
+  },
+  {
+    "type": "image",
+    "id": "_$79",
+    "src": "resource/pages/i29.png"
+  },
+  {
+    "type": "image",
+    "id": "_$81",
+    "src": "resource/pages/i30.png"
+  },
+  {
+    "type": "image",
+    "id": "_$83",
+    "src": "resource/pages/i31.png"
+  },
+  {
+    "type": "image",
+    "id": "_$86",
+    "src": "resource/pages/i32.png"
+  },
+  {
+    "type": "image",
+    "id": "_$88",
+    "src": "resource/pages/i33.png"
+  },
+  {
+    "type": "image",
+    "id": "_$90",
+    "src": "resource/pages/i34.png"
+  },
+  {
+    "type": "image",
+    "id": "_$92",
+    "src": "resource/pages/i35.png"
+  },
+  {
+    "type": "image",
+    "id": "_$94",
+    "src": "resource/pages/i36.png"
+  },
+  {
+    "type": "image",
+    "id": "_$96",
+    "src": "resource/pages/i37.png"
+  },
+  {
+    "type": "image",
+    "id": "_$98",
+    "src": "resource/pages/i38.png"
+  },
+  {
+    "type": "image",
+    "id": "_$100",
+    "src": "resource/pages/i39.png"
+  },
+  {
+    "type": "image",
+    "id": "_$102",
+    "src": "resource/pages/i40.png"
+  },
+  {
+    "type": "image",
+    "id": "_$104",
+    "src": "resource/pages/i41.png"
+  },
+  {
+    "type": "image",
+    "id": "_$106",
+    "src": "resource/pages/i42.png"
+  },
+  {
+    "type": "image",
+    "id": "_$108",
+    "src": "resource/pages/i43.png"
+  },
+  {
+    "type": "image",
+    "id": "_$110",
+    "src": "resource/pages/i44.png"
+  },
+  {
+    "type": "image",
+    "id": "_$112",
+    "src": "resource/pages/i45.png"
+  },
+  {
+    "type": "image",
+    "id": "_$114",
+    "src": "resource/pages/i46.png"
+  },
+  {
+    "type": "image",
+    "id": "_$116",
+    "src": "resource/pages/i47.png"
+  },
+  {
+    "type": "image",
+    "id": "_$118",
+    "src": "resource/pages/i48.png"
+  },
+  {
+    "type": "javascript",
+    "src": "src/pages/BOX.js"
+  },
+  {
+    "type": "image",
+    "id": "_$123",
+    "src": "resource/pages/i49.png"
+  },
+  {
+    "type": "image",
+    "id": "_$125",
+    "src": "resource/pages/i50.png"
+  },
+  {
+    "type": "image",
+    "id": "_$128",
+    "src": "resource/pages/i51.png"
+  },
+  {
+    "type": "image",
+    "id": "_$130",
+    "src": "resource/pages/i52.png"
+  },
+  {
+    "type": "image",
+    "id": "_$132",
+    "src": "resource/pages/i53.png"
+  },
+  {
+    "type": "image",
+    "id": "_$134",
+    "src": "resource/pages/i54.png"
+  },
+  {
+    "type": "image",
+    "id": "_$136",
+    "src": "resource/pages/i55.png"
+  },
+  {
+    "type": "image",
+    "id": "_$139",
+    "src": "resource/pages/i56.jpg"
+  },
+  {
+    "isStage": "true",
+    "type": "javascript",
+    "src": "src/pages/Pages.js"
+  },
+  {
+    "id": "_a2x_con",
+    "type": "json",
+    "src": "resource/pages/pages.con.json"
+  }
+]

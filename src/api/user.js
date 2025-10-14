@@ -24,3 +24,34 @@ export function logout() {
     method: "post",
   });
 };
+
+export function query(userId) {
+  return request({
+    url: `${baseUrl}/query`,
+    method: "get",
+    params: { userId },
+  });
+};
+
+export function add(data) {
+  return request({
+    url: `${baseUrl}/add`,
+    method: "post",
+    data,
+  });
+};
+
+export function edit(data) {
+  return request({
+    url: `${baseUrl}/edit`,
+    method: "post",
+    data,
+  });
+};
+
+export function djData() {
+  return request({
+    url: `/dengjieSj`,
+    method: "get",
+  });
+};

@@ -16,6 +16,36 @@ export const routes = [
     meta: { requiresAuth: true },
   },
   {
+    path: '/dgl',
+    name: 'Dgl',
+    component: () => import('@/views/Game/Dgl/index.vue'),
+    meta: { requiresAuth: true },
+  },
+  {
+    path: '/tyt',
+    name: 'Tyt',
+    component: () => import('@/views/Game/Tyt/index.vue'),
+    meta: { requiresAuth: true },
+  },
+  {
+    path: '/ndj',
+    name: 'Ndj',
+    component: () => import('@/views/Game/Ndj/index.vue'),
+    meta: { requiresAuth: true },
+  },
+  {
+    path: '/shop',
+    name: 'Shop',
+    component: () => import('@/views/Shop/index.vue'),
+    meta: { requiresAuth: true },
+  },
+  {
+    path: '/superWednesday',
+    name: 'SuperWednesday',
+    component: () => import('@/views/SuperWednesday/index.vue'),
+    meta: { requiresAuth: true },
+  },
+  {
     /**
      * 404
      */

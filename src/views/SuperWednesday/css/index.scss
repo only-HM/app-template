@@ -1,0 +1,239 @@
+.super-wednesday-home {
+  width: 100vw;
+  min-height: 100vh;
+  background-color: rgb(145, 223, 247);
+  overflow-y: scroll;
+
+  .bg-1 {
+    height: calc(630 / 1179 * 100vw);
+    background-image: url(../images/bg_1.png);
+
+    .float {
+      position: absolute;
+      right: 1vw;
+      bottom: 0;
+
+      img {
+        width: 11vw;
+        height: 11vw;
+
+        &:nth-child(1) {
+          margin-bottom: 4vw;
+        }
+      }
+    }
+  }
+
+  .bg-2 {
+    height: calc(260 / 1179 * 100vw);
+    background-image: url(../images/bg_2.png);
+    padding-top: 1vw;
+
+    .lucky {
+      width: 86vw;
+      margin: auto;
+    }
+  }
+
+  .bg-3 {
+    height: calc(1030 / 1179 * 100vw);
+    background-image: url(../images/bg_3.png);
+
+    .game-btn {
+      width: 76%;
+      position: absolute;
+      bottom: 2.5vh;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      justify-content: space-between;
+
+      img {
+        width: 50%;
+      }
+    }
+  }
+
+  .bg-4 {
+    height: calc(344 / 1179 * 100vw);
+    background-image: url(../images/bg_4.png);
+    padding-top: 1vh;
+
+    .cash-btn {
+      width: 66%;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+
+      img {
+        width: 32%;
+      }
+    }
+  }
+}
+
+.sign-container.van-popup {
+  background-color: transparent;
+  text-align: left;
+
+  .bg-5 {
+    height: calc(579 / 750 * 100vw);
+    background-image: url(../images/bg_5.png);
+
+    .sign-close {
+      --sign-close-size: 7vw;
+      width: var(--sign-close-size);
+      height: var(--sign-close-size);
+      position: absolute;
+      right: 2vw;
+    }
+
+    .grade-boxs {
+      --img-prize-W: calc(204 * 3.5vh / 56);
+      position: absolute;
+      width: 47%;
+      height: 10%;
+      top: 28%;
+      left: 42%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      i.grade {
+        width: calc(100% - var(--img-prize-W) - .5vw);
+        color: red;
+        font-weight: bold;
+        font-size: 1.3rem;
+        overflow-x: scroll;
+      }
+
+      img.prize-btn {
+        width: var(--img-prize-W);
+        height: 100%;
+        margin-top: 1%;
+      }
+    }
+
+    .sign-content {
+      --sign-tips-H: 35%;
+      width: 78%;
+      height: 48%;
+      position: absolute;
+      top: 45%;
+      left: 49.5%;
+      transform: translateX(-50%);
+      color: #333;
+
+      .sign-tips {
+        height: var(--sign-tips-H);
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .text {
+          font-size: .75rem;
+          color: #000;
+
+          h4 {
+            color: #7b7b7b;
+          }
+
+          i {
+            color: red;
+          }
+        }
+
+        img.sign-btn {
+          width: 25vw;
+        }
+      }
+
+      .sign-steps {
+        height: calc(100% - var(--sign-tips-H));
+        display: flex;
+
+        .step {
+          width: 4rem;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          color: #333;
+          position: relative;
+
+          img {
+            width: 2rem;
+          }
+
+          .line-dot {
+            position: relative;
+            width: 100%;
+            height: 1px;
+            margin-top: .4rem;
+            margin-bottom: .4rem;
+
+            .dots {
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              width: 6px;
+              height: 6px;
+              border-radius: 50%;
+              background-color: rgb(197, 197, 197);
+            }
+
+            &::before {
+              content: '';
+              position: absolute;
+              width: 100%;
+              height: 100%;
+              left: -50%;
+              top: 50%;
+              transform: translateY(-50%);
+              background-color: rgb(197, 197, 197);
+            }
+          }
+
+          .text {
+            font-size: .75rem;
+          }
+
+          &.first {
+            .line-dot {
+              &::before {
+                background-color: transparent !important;
+              }
+            }
+          }
+
+          &.last::before {
+            --extra-W: 9vw;
+            --extra-H: calc(33 / 68 * var(--extra-W));
+            content: '';
+            position: absolute;
+            top: -1px;
+            width: var(--extra-W);
+            height: var(--extra-H);
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            background-image: url(../images/extra.png);
+          }
+
+          &.finish {
+            .line-dot {
+              .dots {
+                background-color: rgb(252, 191, 73);
+              }
+
+              &::before {
+                background-color: rgb(252, 191, 73);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

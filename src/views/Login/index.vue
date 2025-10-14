@@ -9,10 +9,20 @@
     <van-button :type="userStore.code === 200 ? 'success' : 'primary'" @click="handleLogin">{{ userStore.code === 200 ?
       '成功'
       : '登录' }}</van-button>
+    <input @change="handleUploadChange" type="file">
+
+    <van-tabs v-model:active="active">
+      <van-tab title="标签 1">内容 1</van-tab>
+      <van-tab title="标签 2">内容 2</van-tab>
+      <van-tab title="标签 3">内容 3</van-tab>
+      <van-tab title="标签 4">内容 4</van-tab>
+    </van-tabs>
   </div>
 </template>
 
 <script setup>
+import { ref } from "vue";
+import { uploadFile } from "@/api/uploadFile";
 import { showSuccessToast, showFailToast } from "vant";
 import { useUserStore } from "@/store/modules/user";
 const userStore = useUserStore();
@@ -27,4 +37,16 @@ const handleLogin = async () => {
     showFailToast(err);
   };
 };
+
+const handleUploadChange = async (e) => {
+  e.preventDefault();
+  const files = e.target.files;
+  console.log(files);
+  if (files.length > 0) {
+    const res = await uploadFile('http://localhost:8090/upload', files[0]);
+    console.log(res);
+  };
+};
+
+const active = ref(0);
 </script>

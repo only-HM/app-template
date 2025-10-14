@@ -43,6 +43,7 @@ service.interceptors.response.use(
     const res = response.data;
     // 根据后端返回结构自定义处理
     // 例如：如果后端返回code不为200，则判断为错误
+       return res;
     if (res.code !== 200) {
       // 特殊状态码处理
       if (res.code === 500 || res.code === 501 || res.code === 502 || res.code === 503) {

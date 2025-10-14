@@ -1,0 +1,83 @@
+h1,
+h2,
+h3,
+h4,
+button {
+  margin: 0;
+  padding: 0;
+}
+
+i {
+  font-style: normal;
+}
+
+h1,
+h2,
+h3,
+h4,
+img {
+  display: block;
+}
+
+.bg {
+  width: 100vw;
+  position: relative;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  box-sizing: border-box;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.fit {
+  width: 100%;
+  height: 100%;
+}
+
+.absolute {
+  position: absolute;
+}
+
+button.orange {
+  padding: .2rem 1.2rem;
+  color: rgb(243, 80, 0);
+  background-color: rgb(252, 199, 58);
+  border: 2px solid rgb(236, 173, 15);
+  border-radius: 99px;
+  box-sizing: border-box;
+}
+
+button.blue {
+  padding: .2rem 1.2rem;
+  color: white;
+  background-color: rgb(32, 130, 252);
+  border: 2px solid rgb(26, 117, 230);
+  border-radius: 99px;
+  box-sizing: border-box;
+}
+
+.text-black {
+  color: black !important;
+}
+
+.text-orange {
+  color: rgb(222, 97, 4) !important;
+}
+
+.text-bold {
+  font-weight: bold;
+}
+
+.mt-2 {
+  margin-top: 2px;
+}
+
+.mt-4 {
+  margin-top: 4px;
+}
+
+.mt-6 {
+  margin-top: 6px;
+}

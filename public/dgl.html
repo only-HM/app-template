@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>手机版叠箱子游戏</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      -webkit-tap-highlight-color: transparent;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+      color: white;
+      overflow: hidden;
+      padding: 10px;
+      touch-action: manipulation;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+      width: 100%;
+      max-width: 500px;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 5px;
+      width: 100%;
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+      margin-bottom: 5px;
+    }
+
+    .subtitle {
+      font-size: 1rem;
+      opacity: 0.9;
+    }
+
+    .game-info {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.4);
+      padding: 12px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .info-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .info-label {
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .info-value {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #FFD700;
+    }
+
+    .game-container {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+      border-radius: 12px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+      touch-action: none;
+    }
+
+    canvas {
+      background: rgba(0, 0, 0, 0.3);
+      display: block;
+      width: 100%;
+    }
+
+    .controls {
+      display: flex;
+      gap: 15px;
+      margin-top: 15px;
+      width: 100%;
+    }
+
+    button {
+      padding: 14px 0;
+      font-size: 1.1rem;
+      background: linear-gradient(to right, #FF416C, #FF4B2B);
+      border: none;
+      border-radius: 50px;
+      color: white;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      transition: transform 0.2s, box-shadow 0.2s;
+      font-weight: bold;
+      flex: 1;
+      touch-action: manipulation;
+    }
+
+    button:active {
+      transform: translateY(2px);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .instructions {
+      width: 100%;
+      background: rgba(0, 0, 0, 0.4);
+      padding: 15px;
+      border-radius: 12px;
+      margin-top: 15px;
+      text-align: center;
+      line-height: 1.5;
+      font-size: 0.9rem;
+    }
+
+    .game-over {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.9);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      border-radius: 12px;
+      z-index: 10;
+      display: none;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .game-over h2 {
+      font-size: 2.2rem;
+      color: #FF416C;
+      margin-bottom: 15px;
+    }
+
+    .game-over p {
+      font-size: 1.2rem;
+      margin-bottom: 8px;
+    }
+
+    .final-score {
+      font-size: 2.2rem;
+      color: #FFD700;
+      margin: 15px 0;
+    }
+
+    .perfect-hit {
+      position: absolute;
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #FFD700;
+      opacity: 0;
+      pointer-events: none;
+      animation: floatUp 1.5s ease-out;
+      z-index: 5;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    @keyframes floatUp {
+      0% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      100% {
+        opacity: 0;
+        transform: translateY(-80px);
+      }
+    }
+
+    .tap-hint {
+      position: absolute;
+      top: 30%;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 1.2rem;
+      color: white;
+      background: rgba(0, 0, 0, 0.6);
+      padding: 10px 20px;
+      border-radius: 30px;
+      animation: pulse 2s infinite;
+      display: none;
+    }
+
+    @keyframes pulse {
+      0% {
+        opacity: 0.6;
+      }
+
+      50% {
+        opacity: 1;
+      }
+
+      100% {
+        opacity: 0.6;
+      }
+    }
+
+    @media (max-height: 700px) {
+      h1 {
+        font-size: 1.8rem;
+      }
+
+      .info-value {
+        font-size: 1.3rem;
+      }
+
+      button {
+        padding: 12px 0;
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <h1>叠箱子游戏</h1>
+      <p class="subtitle">点击屏幕让箱子落下，堆得越高越好！</p>
+    </header>
+
+    <div class="game-info">
+      <div class="info-item">
+        <div class="info-label">分数</div>
+        <div id="score" class="info-value">0</div>
+      </div>
+      <div class="info-item">
+        <div class="info-label">关卡</div>
+        <div id="level" class="info-value">1</div>
+      </div>
+      <div class="info-item">
+        <div class="info-label">最高分</div>
+        <div id="best-score" class="info-value">0</div>
+      </div>
+      <div class="info-item">
+        <div class="info-label">高度</div>
+        <div id="height" class="info-value">0</div>
+      </div>
+    </div>
+
+    <div class="game-container">
+      <canvas id="gameCanvas"></canvas>
+      <div id="tapHint" class="tap-hint">点击放下箱子</div>
+
+      <div id="gameOver" class="game-over">
+        <h2>游戏结束!</h2>
+        <p>你的最终分数</p>
+        <div id="finalScore" class="final-score">0</div>
+        <p>堆叠高度: <span id="finalHeight">0</span></p>
+        <button id="restartBtn">再玩一次</button>
+      </div>
+    </div>
+
+    <div class="controls">
+      <button id="startBtn">开始游戏</button>
+      <button id="pauseBtn">暂停</button>
+    </div>
+
+    <div class="instructions">
+      <p>箱子会自动左右滑动，点击屏幕让箱子落下！</p>
+      <p>完美堆叠会有额外加分！堆得越高，分数越高！</p>
+    </div>
+  </div>
+
+  <script>
+    // 获取Canvas和上下文
+    const canvas = document.getElementById('gameCanvas');
+    const ctx = canvas.getContext('2d');
+    const tapHint = document.getElementById('tapHint');
+
+    // 设置Canvas尺寸
+    function resizeCanvas() {
+      const container = document.querySelector('.game-container');
+      canvas.width = container.clientWidth;
+      canvas.height = Math.min(500, window.innerHeight * 0.5);
+    }
+
+    // 游戏状态变量
+    let score = 0;
+    let level = 1;
+    let bestScore = 0;
+    let gameRunning = false;
+    let gamePaused = false;
+    let boxes = [];
+    let currentBox = null;
+    let platform = null;
+    let gameSpeed = 2;
+    let gravity = 0.5;
+    let gameOver = false;
+    let moveDirection = 1; // 1 for right, -1 for left
+    let perfectHitCount = 0;
+    let cameraOffset = 0;
+    let maxHeight = 0;
+    let showTapHint = true;
+
+    // 初始化游戏
+    function initGame() {
+      score = 0;
+      level = 1;
+      gameSpeed = 2;
+      boxes = [];
+      gameOver = false;
+      perfectHitCount = 0;
+      cameraOffset = 0;
+      maxHeight = 0;
+      showTapHint = true;
+
+      // 获取最高分
+      bestScore = localStorage.getItem('boxStackerBestScore') || 0;
+      document.getElementById('best-score').textContent = bestScore;
+      document.getElementById('height').textContent = "0";
+
+      // 创建初始平台
+      platform = {
+        x: canvas.width / 2 - 60,
+        y: canvas.height - 40,
+        width: 120,
+        height: 15,
+        color: '#4CD964'
+      };
+
+      // 更新分数显示
+      document.getElementById('score').textContent = score;
+      document.getElementById('level').textContent = level;
+
+      // 创建第一个箱子
+      createNewBox();
+
+      // 隐藏游戏结束画面
+      document.getElementById('gameOver').style.display = 'none';
+
+      // 显示点击提示
+      if (showTapHint) {
+        tapHint.style.display = 'block';
+        setTimeout(() => {
+          tapHint.style.display = 'none';
+          showTapHint = false;
+        }, 3000);
+      }
+    }
+
+    // 创建新下落的箱子
+    function createNewBox() {
+      const boxSize = 40 + Math.random() * 10;
+      currentBox = {
+        x: level === 1 ? canvas.width / 2 - boxSize / 2 : Math.random() * canvas.width,
+        y: 40 - cameraOffset,
+        width: boxSize,
+        height: boxSize,
+        color: `hsl(${Math.random() * 360}, 70%, 60%)`,
+        speed: 0,
+        falling: false,
+        moving: true,
+        moveSpeed: 2.5 + Math.random() * 1.5,
+        rotation: 0,
+      };
+    }
+
+    // 绘制游戏元素
+    function draw() {
+      // 清除画布
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      // 绘制渐变背景
+      const gradient = ctx.createLinearGradient(0, 0, 0, canvas.height);
+      gradient.addColorStop(0, '#1a2a6c');
+      gradient.addColorStop(0.5, '#b21f1f');
+      gradient.addColorStop(1, '#fdbb2d');
+      ctx.fillStyle = gradient;
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+      // 绘制云朵背景
+      ctx.fillStyle = 'rgba(255, 255, 255, 0.3)';
+      for (let i = 0; i < 4; i++) {
+        const x = (i * 150 + Date.now() / 60) % (canvas.width + 200) - 100;
+        const y = 80 + Math.sin(i) * 20;
+        drawCloud(x, y);
+      }
+
+      // 保存当前状态
+      ctx.save();
+
+      // 应用相机偏移
+      ctx.translate(0, cameraOffset);
+
+      // 绘制平台
+      ctx.fillStyle = platform.color;
+      ctx.fillRect(platform.x, platform.y, platform.width, platform.height);
+      ctx.strokeStyle = 'white';
+      ctx.lineWidth = 2;
+      ctx.strokeRect(platform.x, platform.y, platform.width, platform.height);
+
+      // 绘制所有已落下的箱子
+      boxes.forEach(box => {
+        ctx.fillStyle = box.color;
+        ctx.fillRect(box.x, box.y, box.width, box.height);
+
+        // 绘制箱子细节
+        ctx.strokeStyle = 'rgba(255, 255, 255, 0.7)';
+        ctx.lineWidth = 2;
+        ctx.strokeRect(box.x, box.y, box.width, box.height);
+
+        // 绘制箱子纹理
+        ctx.strokeStyle = 'rgba(0, 0, 0, 0.3)';
+        ctx.lineWidth = 1;
+        ctx.beginPath();
+        ctx.moveTo(box.x + 4, box.y + 4);
+        ctx.lineTo(box.x + box.width - 4, box.y + 4);
+        ctx.lineTo(box.x + box.width - 4, box.y + box.height - 4);
+        ctx.stroke();
+      });
+
+      // 绘制当前箱子
+      if (currentBox) {
+        ctx.fillStyle = currentBox.color;
+        ctx.fillRect(currentBox.x, currentBox.y, currentBox.width, currentBox.height);
+
+        // 绘制箱子细节
+        ctx.strokeStyle = 'white';
+        ctx.lineWidth = 2;
+        ctx.strokeRect(currentBox.x, currentBox.y, currentBox.width, currentBox.height);
+
+        // 绘制箱子纹理
+        ctx.strokeStyle = 'rgba(0, 0, 0, 0.3)';
+        ctx.lineWidth = 1;
+        ctx.beginPath();
+        ctx.moveTo(currentBox.x + 4, currentBox.y + 4);
+        ctx.lineTo(currentBox.x + currentBox.width - 4, currentBox.y + 4);
+        ctx.lineTo(currentBox.x + currentBox.width - 4, currentBox.y + currentBox.height - 4);
+        ctx.stroke();
+
+        // 绘制下落指示器
+        if (!currentBox.falling) {
+          ctx.beginPath();
+          ctx.setLineDash([4, 4]);
+          ctx.moveTo(currentBox.x + currentBox.width / 2, currentBox.y + currentBox.height);
+
+          // 找到箱子下方的最高点
+          let lowestPoint = platform.y;
+          boxes.forEach(box => {
+            if (box.x < currentBox.x + currentBox.width &&
+              box.x + box.width > currentBox.x &&
+              box.y > lowestPoint) {
+              lowestPoint = box.y;
+            }
+          });
+
+          ctx.lineTo(currentBox.x + currentBox.width / 2, lowestPoint);
+          ctx.strokeStyle = 'rgba(255, 255, 255, 0.5)';
+          ctx.stroke();
+          ctx.setLineDash([]);
+        }
+      }
+
+      // 恢复状态
+      ctx.restore();
+
+      // 绘制分数和等级
+      ctx.font = 'bold 16px Arial';
+      ctx.fillStyle = 'white';
+      ctx.fillText(`分数: ${score}`, 15, 25);
+      ctx.fillText(`关卡: ${level}`, canvas.width - 80, 25);
+
+      // 如果游戏暂停，显示暂停文字
+      if (gamePaused) {
+        ctx.fillStyle = 'rgba(0, 0, 0, 0.7)';
+        ctx.fillRect(canvas.width / 2 - 70, canvas.height / 2 - 20, 140, 40);
+
+        ctx.font = '24px Arial';
+        ctx.fillStyle = 'white';
+        ctx.textAlign = 'center';
+        ctx.fillText('游戏暂停', canvas.width / 2, canvas.height / 2 + 8);
+        ctx.textAlign = 'left';
+      }
+    }
+
+    // 绘制云朵
+    function drawCloud(x, y) {
+      ctx.beginPath();
+      ctx.arc(x, y, 15, 0, Math.PI * 2);
+      ctx.arc(x + 12, y - 8, 12, 0, Math.PI * 2);
+      ctx.arc(x + 25, y, 20, 0, Math.PI * 2);
+      ctx.closePath();
+      ctx.fill();
+    }
+
+    // 更新游戏状态
+    function update() {
+      if (!gameRunning || gamePaused || gameOver) return;
+
+      // 移动当前箱子
+      if (currentBox) {
+        if (currentBox.moving && !currentBox.falling) {
+          // 左右移动箱子
+          currentBox.x += currentBox.moveSpeed * moveDirection;
+
+          // 碰到边界改变方向
+          if (currentBox.x <= 0) {
+            currentBox.x = 0;
+            moveDirection = 1;
+          } else if (currentBox.x + currentBox.width >= canvas.width) {
+            currentBox.x = canvas.width - currentBox.width;
+            moveDirection = -1;
+          }
+        }
+
+        if (currentBox.falling) {
+          // 应用重力
+          currentBox.y += currentBox.speed;
+          currentBox.speed += gravity;
+
+          // 检查是否落在平台或其它箱子上
+          let landed = false;
+          let perfectHit = false;
+
+          // 检查平台
+          if (currentBox.y + currentBox.height >= platform.y &&
+            currentBox.x + currentBox.width > platform.x &&
+            currentBox.x < platform.x + platform.width) {
+            currentBox.y = platform.y - currentBox.height;
+            landed = true;
+
+            // 检查是否完美落在平台上
+            if (Math.abs((currentBox.x + currentBox.width / 2) - (platform.x + platform.width / 2)) < 5) {
+              perfectHit = true;
+            }
+          }
+
+          // 检查已落下的箱子
+          boxes.forEach(box => {
+            if (currentBox.y + currentBox.height >= box.y &&
+              currentBox.y < box.y &&
+              currentBox.x + currentBox.width > box.x &&
+              currentBox.x < box.x + box.width) {
+              currentBox.y = box.y - currentBox.height;
+              landed = true;
+
+              // 检查是否完美堆叠
+              if (Math.abs((currentBox.x + currentBox.width / 2) - (box.x + box.width / 2)) < 5) {
+                perfectHit = true;
+              }
+            }
+          });
+
+          // 如果箱子落地
+          if (landed) {
+            currentBox.falling = false;
+            currentBox.moving = false;
+            boxes.push(currentBox);
+
+            // 计算当前高度
+            const currentBoxTop = canvas.height - currentBox.y;
+            if (currentBoxTop > maxHeight) {
+              maxHeight = currentBoxTop;
+              document.getElementById('height').textContent = Math.floor(maxHeight);
+            }
+
+            // 增加分数
+            let points = Math.floor(currentBox.width);
+            if (perfectHit) {
+              points *= 2;
+              perfectHitCount++;
+              showPerfectHit(currentBox.x + currentBox.width / 2, currentBox.y + cameraOffset);
+            }
+
+            // 高度奖励
+            points += Math.floor(maxHeight / 20);
+
+            score += points;
+            document.getElementById('score').textContent = score;
+
+            // 每5个完美堆叠增加速度
+            if (perfectHitCount >= 5) {
+              perfectHitCount = 0;
+              gameSpeed += 0.5;
+            }
+
+            // 每100分升一级
+            if (score >= level * 100) {
+              level++;
+              document.getElementById('level').textContent = level;
+            }
+
+            // 调整相机位置，使视图跟随箱子上升
+            const highestBox = boxes.reduce((min, box) => Math.min(min, box.y), platform.y);
+            if (highestBox < canvas.height / 2) {
+              cameraOffset = canvas.height / 2 - highestBox;
+            }
+
+            // 创建新箱子
+            createNewBox();
+          }
+
+          // 检查是否游戏结束（箱子落空）
+          if (currentBox.y > canvas.height) {
+            endGame();
+          }
+        }
+      }
+    }
+
+    // 显示完美堆叠提示
+    function showPerfectHit(x, y) {
+      const perfect = document.createElement('div');
+      perfect.className = 'perfect-hit';
+      perfect.textContent = '完美! +' + Math.floor(currentBox.width * 2);
+      perfect.style.left = (x - 40) + 'px';
+      perfect.style.top = (y - 25) + 'px';
+      document.querySelector('.game-container').appendChild(perfect);
+
+      // 2秒后移除元素
+      setTimeout(() => {
+        perfect.remove();
+      }, 1500);
+    }
+
+    // 游戏结束
+    function endGame() {
+      gameOver = true;
+      gameRunning = false;
+
+      // 更新最高分
+      if (score > bestScore) {
+        bestScore = score;
+        localStorage.setItem('boxStackerBestScore', bestScore);
+        document.getElementById('best-score').textContent = bestScore;
+      }
+
+      // 显示游戏结束画面
+      document.getElementById('finalScore').textContent = score;
+      document.getElementById('finalHeight').textContent = Math.floor(maxHeight);
+      document.getElementById('gameOver').style.display = 'flex';
+    }
+
+    // 游戏主循环
+    function gameLoop() {
+      update();
+      draw();
+      requestAnimationFrame(gameLoop);
+    }
+
+    // 初始化并启动游戏
+    window.addEventListener('load', () => {
+      resizeCanvas();
+      initGame();
+      gameLoop();
+    });
+
+    window.addEventListener('resize', resizeCanvas);
+
+    // 事件监听 - 点击放下箱子
+    canvas.addEventListener('click', (e) => {
+      if (!gameRunning || gamePaused || gameOver || !currentBox || currentBox.falling) return;
+
+      currentBox.falling = true;
+      currentBox.speed = 0;
+    });
+
+    // 事件监听 - 触摸设备支持
+    canvas.addEventListener('touchstart', (e) => {
+      e.preventDefault();
+      if (!gameRunning || gamePaused || gameOver || !currentBox || currentBox.falling) return;
+
+      currentBox.falling = true;
+      currentBox.speed = 0;
+    });
+
+    // 按钮事件
+    document.getElementById('startBtn').addEventListener('click', () => {
+      if (gameOver) {
+        initGame();
+      }
+      gameRunning = true;
+      gamePaused = false;
+    });
+
+    document.getElementById('pauseBtn').addEventListener('click', () => {
+      gamePaused = !gamePaused;
+    });
+
+    document.getElementById('restartBtn').addEventListener('click', () => {
+      initGame();
+      gameRunning = true;
+    });
+
+    // 防止移动端页面滚动
+    document.addEventListener('touchmove', function (e) {
+      if (e.target === canvas) {
+        e.preventDefault();
+      }
+    }, { passive: false });
+  </script>
+</body>
+
+</html>

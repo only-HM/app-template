@@ -19,7 +19,7 @@ export default defineConfig(({ command, mode }) => {
       strictPort: true,
       proxy: {
         '/api': {
-          target: 'http://localhost:4527',
+          target: 'http://localhost:12580',
           changeOrigin: true,
           rewrite: url => url.replace(/^\/api/, ''),
         },
