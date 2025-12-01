@@ -46,6 +46,12 @@ export const routes = [
     meta: { requiresAuth: true },
   },
   {
+    path: '/coupons',
+    name: 'Coupons',
+    component: () => import('@/views/Coupons/index.vue'),
+    meta: { requiresAuth: true },
+  },
+  {
     /**
      * 404
      */
