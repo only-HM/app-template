@@ -184,3 +184,320 @@
   height: calc(17 / 750 * var(--W));
   background-image: url(../image/bg_5.png);
 }
+
+.my-popup.van-popup {
+  background: transparent;
+
+  .iderr-close {
+    position: absolute;
+    right: 5%;
+    top: 1%;
+  }
+}
+
+.login-popup {
+  --login-popup-W: 90vw;
+  width: var(--login-popup-W);
+  height: calc(675 / 599 * var(--login-popup-W));
+  background-image: url(../image/login_p.png);
+
+  .content {
+    width: 92%;
+    height: 74%;
+    position: absolute;
+    top: 24%;
+    left: 4%;
+    text-align: center;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .input {
+      --input-H: 3.4rem;
+      --code-img-W: calc(200 / 80 * var(--input-H));
+      width: 100%;
+      height: var(--input-H);
+      background-color: white;
+      border-radius: 99px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      margin-top: 1rem;
+
+      &:first-child {
+        margin-top: 0;
+      }
+
+      input {
+        width: inherit;
+        height: inherit;
+        background-color: inherit;
+        border-radius: inherit;
+        border: none;
+        outline: none;
+        padding-left: .8rem;
+        box-sizing: border-box;
+      }
+
+      button {
+        width: var(--code-img-W);
+        color: white;
+        background-color: rgb(247, 81, 16);
+        transform: scale(.8);
+      }
+
+      &.code input {
+        width: calc(100% - var(--code-img-W));
+      }
+
+      &.code img {
+        width: var(--code-img-W);
+        transform: scale(.8);
+      }
+    }
+
+    .sure-img {
+      width: 45%;
+      margin-top: 1.6rem;
+    }
+  }
+}
+
+.rule-popup {
+  --rule-popup-W: 85vw;
+  width: var(--rule-popup-W);
+  height: calc(836 / 599 * var(--rule-popup-W));
+  background-image: url(../image/rule_p.png);
+}
+
+.mycoupons-popup {
+  --mycoupons-popup-W: 90vw;
+  width: var(--mycoupons-popup-W);
+  height: calc(747 / 599 * var(--mycoupons-popup-W));
+  background-image: url(../image/mycoupons_p.png);
+
+  .mycoupons-list {
+    --mycoupons-list-W: calc(var(--mycoupons-popup-W) * .9);
+    width: var(--mycoupons-list-W);
+    height: 53%;
+    position: absolute;
+    top: 29%;
+    left: 5%;
+    overflow-y: scroll;
+
+    .card {
+      width: var(--mycoupons-list-W);
+      height: calc(236 / 604 * var(--mycoupons-list-W));
+      background-image: url(../image/card.png);
+      overflow: hidden;
+
+      .produce {
+        width: 42%;
+        height: 60%;
+        position: absolute;
+        top: 15%;
+        left: 10%;
+        display: flex;
+        align-items: center;
+
+        img {
+          --produce-img-W: 2.2rem;
+          width: var(--produce-img-W);
+          height: var(--produce-img-W);
+        }
+
+        .name {
+          width: calc(100% - var(--produce-img-W) - var(--gap) / 1);
+          display: flex;
+          flex-direction: column;
+          margin-left: calc(var(--gap) / 1);
+          font-size: .9rem;
+
+          span:nth-child(2) {
+            color: rgb(246, 74, 48);
+            font-weight: bold;
+            font-size: 1.2rem;
+          }
+        }
+      }
+
+      .check {
+        width: 25.5%;
+        height: 30%;
+        position: absolute;
+        top: 31%;
+        right: 10%;
+        border-radius: 99px;
+        border: 1px solid red;
+        box-sizing: border-box;
+        background-color: lightcoral;
+        opacity: 0;
+      }
+    }
+  }
+
+  h3.tips {
+    width: max-content;
+    position: absolute;
+    bottom: 13%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: .8rem;
+    font-weight: normal !important;
+  }
+
+  .back {
+    width: 38%;
+    height: 10.5%;
+    border-radius: 99px;
+    background-color: red;
+    opacity: 0;
+    position: absolute;
+    bottom: 0%;
+    left: 31%;
+  }
+}
+
+.coupons-popup {
+  --coupons-popup-W: 90vw;
+  width: var(--coupons-popup-W);
+  height: calc(607 / 543 * var(--coupons-popup-W));
+  background-image: url(../image/coupons_p.png);
+
+  .prize-box {
+    width: 51%;
+    height: 25%;
+    position: absolute;
+    left: 24%;
+    top: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+    .cash {
+      display: flex;
+      align-items: baseline;
+      background-image: linear-gradient(to bottom, rgb(16, 110, 252), rgb(29, 198, 250));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      font-weight: bold;
+      font-size: 1.2rem;
+
+      h2 {
+        font-size: 2.8rem;
+        margin-right: .4rem;
+      }
+    }
+
+    .tips {
+      font-size: .8rem;
+    }
+  }
+
+  .sure {
+    width: 51%;
+    height: 13.5%;
+    border-radius: 99px;
+    position: absolute;
+    bottom: 8%;
+    left: 24%;
+    opacity: 0;
+  }
+}
+
+.lose-popup {
+  --lose-popup-W: 90vw;
+  width: var(--lose-popup-W);
+  height: calc(472 / 662 * var(--lose-popup-W));
+  background-image: url(../image/lose_p.png);
+}
+
+.iderr-popup {
+  --iderr-popup-W: 90vw;
+  width: var(--iderr-popup-W);
+  height: calc(510 / 680 * var(--iderr-popup-W));
+  background-image: url(../image/idErr_p.png);
+
+  .go-login {
+    width: 35%;
+    height: 16%;
+    border-radius: 99px;
+    opacity: 0;
+    position: absolute;
+    bottom: 0%;
+    left: 32%;
+  }
+}
+
+.already-popup {
+  --already-popup-W: 90vw;
+  width: var(--already-popup-W);
+  height: calc(510 / 680 * var(--already-popup-W));
+  background-image: url(../image/already_p.png);
+
+  .check {
+    width: 35%;
+    height: 16%;
+    border-radius: 99px;
+    background-color: red;
+    opacity: 0;
+    position: absolute;
+    bottom: 0%;
+    left: 32%;
+  }
+}
+
+.use-popup {
+  --use-popup-W: 90vw;
+  width: var(--use-popup-W);
+  height: calc(747 / 599 * var(--use-popup-W));
+  background-image: url(../image/use_p.png);
+
+  .content {
+    border: 1px solid transparent;
+    box-sizing: border-box;
+    width: 86%;
+    height: 28%;
+    position: absolute;
+    top: 32%;
+    left: 7%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow-y: scroll;
+
+    .label {
+      --label-W: 120px;
+      display: flex;
+      align-items: center;
+      color: rgb(215, 45, 7);
+      font-weight: bold;
+      font-size: 1.4rem;
+
+      label {
+        width: var(--label-W);
+      }
+
+      h4 {
+        width: calc(100% - var(--label-W));
+      }
+    }
+  }
+
+  .known {
+    width: 38%;
+    height: 10.5%;
+    border-radius: 99px;
+    background-color: lightgreen;
+    opacity: 0;
+    position: absolute;
+    bottom: 0%;
+    left: 31%;
+  }
+}
