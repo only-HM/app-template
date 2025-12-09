@@ -52,6 +52,12 @@ export const routes = [
     meta: { requiresAuth: true },
   },
   {
+    path: '/wednesdayHome',
+    name: 'WednesdayHome',
+    component: () => import('@/views/wednesdayHome/index.vue'),
+    meta: { requiresAuth: true },
+  },
+  {
     /**
      * 404
      */
