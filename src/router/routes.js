@@ -54,7 +54,13 @@ export const routes = [
   {
     path: '/wednesdayHome',
     name: 'WednesdayHome',
-    component: () => import('@/views/wednesdayHome/index.vue'),
+    component: () => import('@/views/WednesdayHome/index.vue'),
+    meta: { requiresAuth: true },
+  },
+  {
+    path: '/luckyDraw',
+    name: 'LuckyDraw',
+    component: () => import('@/views/LuckyDraw/index.vue'),
     meta: { requiresAuth: true },
   },
   {
