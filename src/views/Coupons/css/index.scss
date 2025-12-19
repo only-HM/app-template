@@ -290,6 +290,24 @@
   width: var(--rule-popup-W);
   height: calc(836 / 599 * var(--rule-popup-W));
   background-image: url(../image/rule_p.png);
+
+  ul.content {
+    width: 82%;
+    height: 62%;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    overflow-y: scroll;
+
+    li {
+      margin-top: .2rem;
+
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+  }
 }
 
 .mycoupons-popup {

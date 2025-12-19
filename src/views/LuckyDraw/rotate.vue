@@ -19,7 +19,7 @@
 </template>
 
 <script setup>
-import { ref, defineExpose } from 'vue';
+import { ref } from 'vue';
 import 'animate.css';
 
 const emit = defineEmits(['get']);
@@ -59,7 +59,7 @@ const move = (wn = '') => {
     T1 = null;
     let T2 = setTimeout(() => {
       isPrizesAppear.value = true;
-      clearTimeout(T1);
+      clearTimeout(T2);
       T2 = null;
     }, delay.split('')[0] * 1000 + 50);
   }, 50)

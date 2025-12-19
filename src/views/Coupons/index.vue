@@ -83,7 +83,14 @@
 
     <!-- 活动规则 -->
     <van-popup :show="show.rule" class="my-popup">
-      <div class="rule-popup bg"></div>
+      <div class="rule-popup bg">
+        <ul class="content">
+          <li>1、活动期间，每个用户（同一微信号、同一手机号均视为同一用户）仅可参与一次活动；</li>
+          <li>2、每周三上午10:00开启，截止到当周所有优惠券领取完毕或自然周结束；</li>
+          <li>3、用户进入活动页面，点击对应券种的“立即领取” 按钮参与；</li>
+          <li>4、每人每周限参与一次，每次限领一张券，同一用户不得重复参与;5、优惠券为限量发放，数量有限，先到先得，领完即止。</li>
+        </ul>
+      </div>
       <div class="text-center mt-1"><van-icon name="close" color="#fff" size="2.4rem" @click="controlPopup('rule', false)"/></div>
     </van-popup>
 
@@ -251,7 +258,7 @@ const login = () => {
 };
 
 onMounted(()=>{
-  controlPopup('login', true);
+  controlPopup('rule', true);
   // showToast('请确保登录账号与生活优惠账号一致');
   // showToast('活动暂未开始');
 });
