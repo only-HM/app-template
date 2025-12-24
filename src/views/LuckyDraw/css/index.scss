@@ -132,6 +132,10 @@
         background-image: url(../image/bg_rp.png);
         margin-bottom: calc(var(--gap) * .8);
 
+        &.thank-card {
+          background-image: url(../image/bg_thank.png);
+        }
+
         .content {
           position: absolute;
           width: 64%;

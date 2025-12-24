@@ -35,13 +35,18 @@
       <div class="myPrize-modules bg">
         <div class="prizes-box">
           <div class="list">
-            <div v-for="(p, p_i) in prizeData" :key="p_i" class="card bg">
+            <div v-for="(p, p_i) in prizeData" :key="p_i" class="card bg" :class="{'thank-card': p.isThank}">
               <div class="content">
                 <div class="t">
                   <div class="l">
-                    <i>{{ p.money }}</i><i>元</i>
+                    <template v-if="!p.isThank">
+                      <i>{{ p.money }}</i><i>元</i>
+                    </template>
+                    <template v-else>
+                      <i>谢谢参与</i>
+                    </template>
                   </div>
-                  <div class="r">现金红包</div>
+                  <div class="r" v-if="!p.isThank">现金红包</div>
                 </div>
                 <div class="b">参与时间：{{ p.time }}</div>
               </div>
@@ -178,10 +183,11 @@ const openMyPrize = () => {
     T = null;
     closeToast();
     const data = [
-      { money: Math.ceil(Math.random() * 100), time: '2025-12-25 14:00:00' },
-      { money: Math.ceil(Math.random() * 100), time: '2025-12-25 14:00:00' },
-      { money: Math.ceil(Math.random() * 100), time: '2025-12-25 14:00:00' },
-      { money: 0.38, time: '2025-12-25 14:00:00' },
+      { money: Math.ceil(Math.random() * 100), time: '2025-12-25 14:00:00', isThank: false },
+      { money: Math.ceil(Math.random() * 100), time: '2025-12-25 14:00:00', isThank: false },
+      { money: Math.ceil(Math.random() * 100), time: '2025-12-25 14:00:00', isThank: false },
+      { money: 0.38, time: '2025-12-25 14:00:00', isThank: false },
+      { money: 0, time: '2025-12-25 14:00:00', isThank: true },
     ];
     prizeData.value = [...data];
   }, 1000);
