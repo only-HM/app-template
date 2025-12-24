@@ -258,7 +258,7 @@ const login = () => {
 };
 
 onMounted(()=>{
-  controlPopup('rule', true);
+  controlPopup('login', true);
   // showToast('请确保登录账号与生活优惠账号一致');
   // showToast('活动暂未开始');
 });
