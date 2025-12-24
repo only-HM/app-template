@@ -10,7 +10,6 @@
   text-align: left;
   width: 100vw;
   height: 100vh;
-  background-color: rgb(179, 224, 240);
   overflow-y: scroll;
 }
 
@@ -57,7 +56,7 @@
 
 .bg-3 {
   width: var(--W);
-  height: calc(320 / 650 * var(--W));
+  height: calc(270 / 650 * var(--W));
   background-image: url(../image/bg_3.png);
 }
 
@@ -81,6 +80,7 @@
   &.bg3-box {
     display: flex;
     justify-content: space-between;
+    top: 47%;
 
     .bg3-card {
       --bg3-card-W: calc((var(--boxs-W) - var(--gap)) / 2);
@@ -203,7 +203,7 @@
 
 .bg-5 {
   width: var(--W);
-  height: calc(47 / 750 * var(--W));
+  height: calc(140 / 750 * var(--W));
   background-image: url(../image/bg_5.png);
 }
 
