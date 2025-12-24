@@ -6,13 +6,14 @@
         <img src="./image/coupons.png" @click="controlPopup('myCoupons', true)">
       </div>
     </div>
-    <div class="bg-2 bg"></div>
-
-    <div class="bg-3 bg">
+    <div class="bg-2 bg">
       <div class="phone-modules flex-center">
         <span>参与号码：</span>
         <span>185****4571</span>
       </div>
+    </div>
+
+    <div class="bg-3 bg">
       <div class="bg3-box boxs">
         <div class="bg3-card bg" v-for="(b, b_i) in bigDatas" :key="b_i">
           <div class="icon-box">

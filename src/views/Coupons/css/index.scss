@@ -38,28 +38,32 @@
   width: var(--W);
   height: calc(370 / 750 * var(--W));
   background-image: url(../image/bg_2.png);
+
+  .phone-modules {
+    color: white;
+    background-color: rgba(255, 255, 255, .1);
+    border: 1px solid white;
+    border-radius: 99px;
+    width: max-content;
+    padding: 0 1.2rem;
+    box-sizing: border-box;
+    font-size: .9rem;
+    position: absolute;
+    bottom: 18%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
 
 .bg-3 {
   width: var(--W);
   height: calc(320 / 650 * var(--W));
   background-image: url(../image/bg_3.png);
-
-  .phone-modules {
-    background-color: rgb(213, 249, 255);
-    border-radius: 99px;
-    width: max-content;
-    height: 2rem;
-    padding: .2rem 1.2rem;
-    box-sizing: border-box;
-    margin: 0 auto;
-    font-size: .9rem;
-  }
 }
 
 .bg-4 {
   width: var(--W);
-  height: calc(650 / 750 * var(--W));
+  height: calc(620 / 750 * var(--W));
   background-image: url(../image/bg_4.png);
 }
 
@@ -77,7 +81,6 @@
   &.bg3-box {
     display: flex;
     justify-content: space-between;
-    top: 59%;
 
     .bg3-card {
       --bg3-card-W: calc((var(--boxs-W) - var(--gap)) / 2);
@@ -200,7 +203,7 @@
 
 .bg-5 {
   width: var(--W);
-  height: calc(17 / 750 * var(--W));
+  height: calc(47 / 750 * var(--W));
   background-image: url(../image/bg_5.png);
 }
 
