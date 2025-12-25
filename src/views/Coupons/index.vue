@@ -233,7 +233,7 @@ const controlPopup = (type, val = true, callback = void 0) => {
   const _type = ['login', 'rule', 'myCoupons', 'coupons', 'lose', 'iderr', 'already', 'use'];
   if(_type.indexOf(type) === -1) throw('检查弹窗类型是否填写正确？');
   show.value[type] = val;
-  callback && callback();
+  callback && typeof callback === 'function' && callback();
 };
 
 /**
