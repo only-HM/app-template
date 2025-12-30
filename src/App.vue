@@ -5,7 +5,7 @@
       <router-link to="/about">About</router-link> |
       <router-link to="/login">login</router-link>
     </nav> -->
-    <router-view class="rotter-view"/>
+    <router-view class="router-view"/>
   </div>
 </template>
 
@@ -15,7 +15,7 @@
 @use '@/styles/_variables' as *;
 @use '@/styles/_mixins' as *;
 
-.rotter-view{
+.router-view {
   width:100vw;
   height: 100vh;
 }

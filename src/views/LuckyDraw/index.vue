@@ -1,6 +1,12 @@
 <template>
   <div class="container">
     <div class="bg-1 bg">
+      <div class="phone-modules">
+        <span>参与号码：</span>
+        <span>{{ phone }}</span>
+        <button>更换</button>
+      </div>
+
       <div class="float">
         <img src="./image/float_1.png" @click="openMyPrize">
         <img src="./image/float_2.png" @click="handleOverlay('rule', true)">

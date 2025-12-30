@@ -64,6 +64,12 @@ export const routes = [
     meta: { requiresAuth: true },
   },
   {
+    path: '/interests',
+    name: 'Interests',
+    component: () => import('@/views/Interests/index.vue'),
+    meta: { requiresAuth: true },
+  },
+  {
     /**
      * 404
      */
