@@ -52,6 +52,18 @@
     bottom: 18%;
     left: 50%;
     transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+
+    button {
+      margin-left: .2rem;
+      padding: 0 .4rem;
+      color: white;
+      box-sizing: border-box;
+      background-color: rgb(74, 156, 250);
+    }
   }
 }
 
