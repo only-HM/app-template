@@ -18,7 +18,7 @@
     </div>
     <div class="bg-4 bg"></div>
 
-    <van-overlay :show="show.rule">
+    <van-popup :show="show.rule" class="my-popup">
       <div class="rule-modules bg">
         <ul class="content">
           <li class="text-bold">一、活动时间</li>
@@ -35,9 +35,9 @@
         </ul>
         <button @click="handleOverlay('rule', false)">知道了</button>
       </div>
-    </van-overlay>
+    </van-popup>
 
-    <van-overlay :show="show.myPrize">
+    <van-popup :show="show.myPrize" class="my-popup">
       <div class="myPrize-modules bg">
         <div class="prizes-box">
           <div class="list">
@@ -63,7 +63,7 @@
         </div>
         <button @click="handleOverlay('myPrize', false, () => prizeData = [])">返回</button>
       </div>
-    </van-overlay>
+    </van-popup>
 
     <van-overlay :show="show.dynamic">
       <div class="dynamic-modules overlay-modules">

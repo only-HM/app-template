@@ -82,6 +82,17 @@
   height: 100vh;
 }
 
+.my-popup {
+  width: 100vw;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  top: 0;
+  transform: none;
+  max-width: none;
+  background-color: transparent;
+}
+
 .rule-modules {
   --rule-modules-W: 85vw;
   width: var(--rule-modules-W);
