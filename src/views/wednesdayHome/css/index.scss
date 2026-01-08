@@ -41,6 +41,12 @@
   .title {
     display: flex;
     align-items: center;
+    justify-content: space-between;
+
+    >div {
+      display: flex;
+      align-items: center;
+    }
 
     h2 {
       font-size: 1.2rem;

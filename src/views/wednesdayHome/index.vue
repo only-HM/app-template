@@ -15,8 +15,11 @@
 
     <div class="modules first-modules">
       <div class="title">
-        <van-icon :name="data.shyh.icon" size="1.2rem"/>
-        <h2>{{ data.shyh.title }}</h2>
+        <div>
+          <van-icon :name="data.shyh.icon" size="1.2rem"/>
+          <h2>{{ data.shyh.title }}</h2>
+        </div>
+        <i class="more">更多<van-icon name="upgrade" style="transform: rotate(90deg);margin-left: .2rem;"/></i>
       </div>
       <div class="cards">
         <div class="self" v-for="(l, l_i) in data.shyh.list" :key="l_i">
@@ -40,8 +43,11 @@
 
     <div class="modules">
       <div class="title">
-        <van-icon :name="data.cxqy.icon" size="1.2rem"/>
-        <h2>{{ data.cxqy.title }}</h2>
+        <div>
+          <van-icon :name="data.cxqy.icon" size="1.2rem"/>
+          <h2>{{ data.cxqy.title }}</h2>
+        </div>
+        <i class="more">更多<van-icon name="upgrade" style="transform: rotate(90deg);margin-left: .2rem;"/></i>
       </div>
       <div class="cards">
         <div class="self" v-for="(l, l_i) in data.cxqy.list" :key="l_i">
@@ -62,8 +68,11 @@
 
     <div class="modules integral">
       <div class="title">
-        <van-icon :name="data.jfsc.icon" size="1.2rem"/>
-        <h2>{{ data.jfsc.title }}</h2>
+        <div>
+          <van-icon :name="data.jfsc.icon" size="1.2rem"/>
+          <h2>{{ data.jfsc.title }}</h2>
+        </div>
+        <i class="more">更多<van-icon name="upgrade" style="transform: rotate(90deg);margin-left: .2rem;"/></i>
       </div>
       <div class="cards">
         <div class="self" v-for="(l, l_i) in data.jfsc.list" :key="l_i">
@@ -79,8 +88,10 @@
 
     <div class="modules cjxqs">
       <div class="title">
-        <van-icon :name="data.jfsc.icon" size="1.2rem"/>
-        <h2>{{ data.cjxqs.title }}</h2>
+        <div>
+          <van-icon :name="data.jfsc.icon" size="1.2rem"/>
+          <h2>{{ data.cjxqs.title }}</h2>
+        </div>
       </div>
       <div class="img-box bg">
         <img class="go" src="./image/go.png" >
