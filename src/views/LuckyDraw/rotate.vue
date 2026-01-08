@@ -25,7 +25,7 @@ import 'animate.css';
 const emit = defineEmits(['get']);
 
 const winImgUrl = ref('');
-const delay = '2s';
+const delay = '3s';
 const isRotate = ref(false);
 const isPrizesAppear = ref(false);
 const cards = ref([
@@ -74,12 +74,12 @@ const init = () => {
   isPrizesAppear.value = false;
   winImgUrl.value = '';
   cards.value = [
-    { name: 'p_88', url: new URL("./image/c_88.png", import.meta.url).href },
-    { name: 'p_68', url: new URL("./image/c_68.png", import.meta.url).href },
-    { name: 'p_8', url: new URL("./image/c_8.png", import.meta.url).href },
-    { name: 'p_d88', url: new URL("./image/c_d88.png", import.meta.url).href },
-    { name: 'p_d38', url: new URL("./image/c_d38.png", import.meta.url).href },
-    { name: 'p_thank', url: new URL("./image/c_thank.png", import.meta.url).href },
+    { name: 'p_88', url: new URL("./image/c_88.png", import.meta.url).href, winUrk: ref(new URL("./image/p_88.png", import.meta.url).href) },
+    { name: 'p_68', url: new URL("./image/c_68.png", import.meta.url).href, winUrk: ref(new URL("./image/p_68.png", import.meta.url).href) },
+    { name: 'p_8', url: new URL("./image/c_8.png", import.meta.url).href, winUrk: ref(new URL("./image/p_8.png", import.meta.url).href) },
+    { name: 'p_d88', url: new URL("./image/c_d88.png", import.meta.url).href, winUrk: ref(new URL("./image/p_d88.png", import.meta.url).href) },
+    { name: 'p_d38', url: new URL("./image/c_d38.png", import.meta.url).href, winUrk: ref(new URL("./image/p_d38.png", import.meta.url).href) },
+    { name: 'p_thank', url: new URL("./image/c_thank.png", import.meta.url).href, winUrk: ref(new URL("./image/p_thank.png", import.meta.url).href) },
   ];
 };
 
