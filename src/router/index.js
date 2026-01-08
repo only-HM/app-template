@@ -16,7 +16,7 @@ router.beforeEach(async (to, from, next) => {
   console.log('------------------');
   const toPath = to.href;
   if (toPath === '/dist/index.html') {
-    next({ name: 'Login' });
+    next({ name: 'LuckyDraw' });
   } else {
     next();
   };

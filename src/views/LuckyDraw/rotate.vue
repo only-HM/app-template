@@ -29,18 +29,18 @@ const delay = '8s';
 const isRotate = ref(false);
 const isPrizesAppear = ref(false);
 const cards = ref([
-  { name: 'p_88', url: new URL("./image/c_88.png", import.meta.url).href },
-  { name: 'p_68', url: new URL("./image/c_68.png", import.meta.url).href },
-  { name: 'p_8', url: new URL("./image/c_8.png", import.meta.url).href },
-  { name: 'p_d88', url: new URL("./image/c_d88.png", import.meta.url).href },
-  { name: 'p_d38', url: new URL("./image/c_d38.png", import.meta.url).href },
-  { name: 'p_thank', url: new URL("./image/c_thank.png", import.meta.url).href },
+  { name: 'p_88', url: new URL("./image/c_88.png", import.meta.url).href, winUrk: ref(new URL("./image/p_88.png", import.meta.url).href) },
+  { name: 'p_68', url: new URL("./image/c_68.png", import.meta.url).href, winUrk: ref(new URL("./image/p_68.png", import.meta.url).href) },
+  { name: 'p_8', url: new URL("./image/c_8.png", import.meta.url).href, winUrk: ref(new URL("./image/p_8.png", import.meta.url).href) },
+  { name: 'p_d88', url: new URL("./image/c_d88.png", import.meta.url).href, winUrk: ref(new URL("./image/p_d88.png", import.meta.url).href) },
+  { name: 'p_d38', url: new URL("./image/c_d38.png", import.meta.url).href, winUrk: ref(new URL("./image/p_d38.png", import.meta.url).href) },
+  { name: 'p_thank', url: new URL("./image/c_thank.png", import.meta.url).href, winUrk: ref(new URL("./image/p_thank.png", import.meta.url).href) },
 ]);
 const sortCards = (wn = '') => {
   if(!wn) return console.error('是否填入了得奖信息？');
   const i = cards.value.findIndex(c => c.name === wn);
   if(i < 0) return console.error('请确保填入的得奖信息一一对应!');
-  winImgUrl.value = cards.value[i].url.replace('/c_', '/p_');
+  winImgUrl.value = cards.value[i].winUrk;
   const _f = cards.value.filter((c, c_i) => c_i !== i);
   const _s = cards.value.splice(i, 1);
   cards.value = [..._s, ..._f];
