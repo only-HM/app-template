@@ -25,7 +25,7 @@ import 'animate.css';
 const emit = defineEmits(['get']);
 
 const winImgUrl = ref('');
-const delay = '8s';
+const delay = '2s';
 const isRotate = ref(false);
 const isPrizesAppear = ref(false);
 const cards = ref([
