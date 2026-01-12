@@ -70,6 +70,12 @@ export const routes = [
     meta: { requiresAuth: true },
   },
   {
+    path: '/openRedPacket',
+    name: 'OpenRedPacket',
+    component: () => import('@/views/OpenRedPacket/index.vue'),
+    meta: { requiresAuth: true },
+  },
+  {
     /**
      * 404
      */

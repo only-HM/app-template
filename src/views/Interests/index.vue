@@ -37,6 +37,8 @@ const cards = ref([
   { id: Math.random().toString().split('.')[1].replace(/^0+/,''), imgUrl: new URL('./image/card_2.png', import.meta.url).href, name: '5GB+30元车主券', tips: '流量出行畅享无忧', money: '19.9' },
   { id: Math.random().toString().split('.')[1].replace(/^0+/,''), imgUrl: new URL('./image/card_3.png', import.meta.url).href, name: '20元商超消费券', tips: '新品！生活券包随心领', money: '9.9' },
   { id: Math.random().toString().split('.')[1].replace(/^0+/,''), imgUrl: new URL('./image/card_4.png', import.meta.url).href, name: '1.9元抵10元券', tips: '热销权益第2名', money: '1.9' },
+  { id: Math.random().toString().split('.')[1].replace(/^0+/,''), imgUrl: new URL('./image/card_5.png', import.meta.url).href, name: '10GB通用流量包', tips: '优惠流量月月领', money: '20.00' },
+  { id: Math.random().toString().split('.')[1].replace(/^0+/,''), imgUrl: new URL('./image/card_6.png', import.meta.url).href, name: '5GB通用流量包', tips: '优惠流量月月领', money: '10.00' },
 ]);
 
 const goUrl = (row) => {
