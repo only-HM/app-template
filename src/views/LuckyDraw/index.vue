@@ -115,7 +115,7 @@ const preDraw = () => {
     T = null;
     closeToast();
     // 以下为可执行的 弹窗 或者 动效
-    const list = ['p_88', 'p_68', 'p_8', 'p_d88', 'p_d38', 'p_thank', 'p_exchange', 'p_finish', 'p_notBegin'];
+    const list = ['p_88', 'p_68', 'p_8', 'p_1d08', 'p_d88', 'p_d38', 'p_thank', 'p_exchange', 'p_finish', 'p_notBegin'];
     const r = Math.floor(Math.random() * list.length);
     console.log('随机抽取弹窗或动效：', list[r]);
     handleOverlay('dynamic', true, handleRotate(list[r]));

@@ -32,6 +32,7 @@ const cards = ref([
   { name: 'p_88', url: new URL("./image/c_88.png", import.meta.url).href, winUrk: ref(new URL("./image/p_88.png", import.meta.url).href) },
   { name: 'p_68', url: new URL("./image/c_68.png", import.meta.url).href, winUrk: ref(new URL("./image/p_68.png", import.meta.url).href) },
   { name: 'p_8', url: new URL("./image/c_8.png", import.meta.url).href, winUrk: ref(new URL("./image/p_8.png", import.meta.url).href) },
+  { name: 'p_1d08', url: new URL("./image/c_1d08.png", import.meta.url).href, winUrk: ref(new URL("./image/p_1d08.png", import.meta.url).href) },
   { name: 'p_d88', url: new URL("./image/c_d88.png", import.meta.url).href, winUrk: ref(new URL("./image/p_d88.png", import.meta.url).href) },
   { name: 'p_d38', url: new URL("./image/c_d38.png", import.meta.url).href, winUrk: ref(new URL("./image/p_d38.png", import.meta.url).href) },
   { name: 'p_thank', url: new URL("./image/c_thank.png", import.meta.url).href, winUrk: ref(new URL("./image/p_thank.png", import.meta.url).href) },
@@ -43,14 +44,14 @@ const sortCards = (wn = '') => {
   winImgUrl.value = cards.value[i].winUrk;
   const _f = cards.value.filter((c, c_i) => c_i !== i);
   const _s = cards.value.splice(i, 1);
-  cards.value = [..._s, ..._f];
+  cards.value = [..._f, ..._s];
 };
 
 /**
  * @param wn 得奖的卡片 ['p_88', 'p_68', 'p_8', 'p_d88', 'p_d38']
  */
 const move = (wn = '') => {
-  const exam = ['p_88', 'p_68', 'p_8', 'p_d88', 'p_d38'];
+  const exam = ['p_88', 'p_68', 'p_8', 'p_1d08', 'p_d88', 'p_d38'];
   if(exam.indexOf(wn) < 0) return console.error('检查传入的得奖信息是否存在');
   sortCards(wn);
   let T1 = setTimeout(() => {
@@ -77,6 +78,7 @@ const init = () => {
     { name: 'p_88', url: new URL("./image/c_88.png", import.meta.url).href, winUrk: ref(new URL("./image/p_88.png", import.meta.url).href) },
     { name: 'p_68', url: new URL("./image/c_68.png", import.meta.url).href, winUrk: ref(new URL("./image/p_68.png", import.meta.url).href) },
     { name: 'p_8', url: new URL("./image/c_8.png", import.meta.url).href, winUrk: ref(new URL("./image/p_8.png", import.meta.url).href) },
+    { name: 'p_1d08', url: new URL("./image/c_1d08.png", import.meta.url).href, winUrk: ref(new URL("./image/p_1d08.png", import.meta.url).href) },
     { name: 'p_d88', url: new URL("./image/c_d88.png", import.meta.url).href, winUrk: ref(new URL("./image/p_d88.png", import.meta.url).href) },
     { name: 'p_d38', url: new URL("./image/c_d38.png", import.meta.url).href, winUrk: ref(new URL("./image/p_d38.png", import.meta.url).href) },
     { name: 'p_thank', url: new URL("./image/c_thank.png", import.meta.url).href, winUrk: ref(new URL("./image/p_thank.png", import.meta.url).href) },
@@ -113,7 +115,7 @@ $sceneH: calc($sceneW / 3);
 }
 
 .scene-3d.animation .box {
-  transform: rotateY(calc(-360deg * 6));
+  transform: rotateY(calc(-360deg * 7));
 }
 
 .box .card {
