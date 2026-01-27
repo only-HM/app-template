@@ -48,6 +48,7 @@
             </div>
             <h4 v-if="isEmptyCode === '1'">参与号码：{{ phone }}</h4>
             <h4 v-if="isEmptyCode === '1'">参与时间：{{ participationTime }}</h4>
+            <h4 v-if="isEmptyCode === '1'" style="color: red;font-weight: normal;margin-top: .4rem;">请前往“深圳电信”公众号领取</h4>
 
             <img v-if="isEmptyCode === '0'" class="empty" src="./images/empty.png" >
             <h4 v-if="isEmptyCode === '0'">还未获得奖品~</h4>
