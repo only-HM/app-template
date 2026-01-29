@@ -102,6 +102,32 @@
         <van-icon name="close" color="white" size="2.4rem" class="my-close" @click="handleOverlay('err', false)"/>
       </div>
     </van-popup>
+
+    <van-popup v-model:show="show.notStart" class="my-popup">
+      <div class="content">
+        <div class="popup-bg popup-bg-2 bg">
+          <div class="end-modules">
+            <h3 style="margin-bottom: .5rem;">未开始</h3>
+            <span>每日上午10:00准时开启</span>
+            <span>定好闹钟准时来哦~</span>
+          </div>
+        </div>
+        <van-icon name="close" color="white" size="2.4rem" class="my-close" @click="handleOverlay('notStart', false)"/>
+      </div>
+    </van-popup>
+
+    <van-popup v-model:show="show.received" class="my-popup">
+      <div class="content">
+        <div class="popup-bg popup-bg-2 bg">
+          <div class="end-modules">
+            <h3 style="margin-bottom: .5rem;">已领完</h3>
+            <span>每天上午10:00准时开启</span>
+            <span>我们不见不散~</span>
+          </div>
+        </div>
+        <van-icon name="close" color="white" size="2.4rem" class="my-close" @click="handleOverlay('received', false)"/>
+      </div>
+    </van-popup>
   </div>
 </template>
 
@@ -119,11 +145,13 @@ const show = ref({
   end: false,
   finish: false,
   err: false,
+  notStart: false,
+  received: false,
 });
 
 const handleOverlay = (type, b = true, fn = void 0) => {
   if(!type) return console.error('是否传入type？');
-  const types = ['rule', 'myPrize', 'end', 'finish', 'err'];
+  const types = ['rule', 'myPrize', 'end', 'finish', 'err', 'notStart', 'received'];
   const isExist = types.indexOf(type) > -1;
   if(!isExist) return console.error('检查type是否正确？');
   show.value[type] = b;
@@ -166,8 +194,8 @@ const goLogin = () => {
 };
 
 const openRed = () => {
-  const _list = ['end', 'finish', 'err'];
-  const r = Math.floor(Math.random() * 3);
+  const _list = ['end', 'finish', 'err', 'notStart', 'received'];
+  const r = Math.floor(Math.random() * 5);
   console.log('触发：', _list[r]);
   handleOverlay(_list[r], true);
 };
