@@ -2,8 +2,8 @@
   <div class="container">
     <div class="bg-1 bg">
       <div class="float">
-        <img src="./images/rule.png" @click="handleOverlay('rule', true)">
-        <img src="./images/prize.png" @click="getPrize">
+        <img src="./images/OpenRedPacket3/rule.png" @click="handleOverlay('rule', true)">
+        <img src="./images/OpenRedPacket3/prize.png" @click="getPrize">
       </div>
     </div>
     <div class="bg-2 bg">
@@ -14,7 +14,7 @@
     </div>
     <div class="bg-3 bg"></div>
     <div class="bg-4 bg">
-      <img class="open" src="./images/open.png" @click="openRed">
+      <img class="open" src="./images/OpenRedPacket3/open.png" @click="openRed">
     </div>
 
     <van-popup v-model:show="show.rule" class="my-popup">
@@ -203,5 +203,5 @@ const openRed = () => {
 
 <style scoped lang="scss">
 @import url(./css/common.scss);
-@import url(./css/index.scss);
+@import url(./css/OpenRedPacket3.scss);
 </style>
