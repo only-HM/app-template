@@ -1,0 +1,739 @@
+{
+  "code": 0,
+  "msg": "请求通过",
+  "systemDate": "2026-03-10T01:01:53.498+0000",
+  "data": {
+    "banners": null,
+    "recommendRender": [],
+    "commodityRender": null,
+    "classifyCommodityType": [
+      {
+        "categoryName": "热门推荐",
+        "sort": 100,
+        "typeList": [
+          {
+            "brandId": "64d48cee8727ed6847af3b7e",
+            "typeName": "天虹",
+            "brandType": 3,
+            "logo": "/files/gift/2023/8/14/1691997271269_20891WTBF.jpg",
+            "link": null,
+            "mark": "上新",
+            "sort": 200
+          },
+          {
+            "brandId": "64a4f5f170e7e30c1f004546",
+            "typeName": "星巴克",
+            "brandType": 3,
+            "logo": "/files/gift/2023/7/5/1688526210283_42601WTBF.jpg",
+            "link": null,
+            "mark": "新品上线",
+            "sort": 97
+          },
+          {
+            "brandId": "64a4f5f770e7e30c1f004665",
+            "typeName": "肯德基",
+            "brandType": 3,
+            "logo": "/files/gift/2023/7/5/1688526272995_46781WTBF.jpg",
+            "link": null,
+            "mark": "HOT",
+            "sort": 96
+          },
+          {
+            "brandId": "64a4f5f770e7e30c1f004666",
+            "typeName": "麦当劳",
+            "brandType": 3,
+            "logo": "/files/gift/2023/7/5/1688526273115_96241WTBF.jpg",
+            "link": null,
+            "mark": "HOT",
+            "sort": 95
+          },
+          {
+            "brandId": "64a4f5f870e7e30c1f004710",
+            "typeName": "美团",
+            "brandType": 2,
+            "logo": "/files/gift/2023/7/5/1688526310253_39891WTBF.jpg",
+            "link": null,
+            "mark": "到店优惠",
+            "sort": 90
+          },
+          {
+            "brandId": "64a4f5f870e7e30c1f00475b",
+            "typeName": "美团外卖",
+            "brandType": 2,
+            "logo": "/files/gift/2023/7/12/1689152111364_23531WTBF.jpg",
+            "link": null,
+            "mark": "",
+            "sort": 7
+          },
+          {
+            "brandId": "64a4f5f870e7e30c1f004764",
+            "typeName": "滴滴出行",
+            "brandType": 2,
+            "logo": "/files/gift/2023/7/5/1688526328283_73981WTBF.jpg",
+            "link": null,
+            "mark": "",
+            "sort": 6
+          },
+          {
+            "brandId": "64a4f5f770e7e30c1f004655",
+            "typeName": "朴朴超市",
+            "brandType": 3,
+            "logo": "/files/gift/2023/7/5/1688526269137_66341WTBF.jpg",
+            "link": null,
+            "mark": "",
+            "sort": 5
+          }
+        ]
+      },
+      {
+        "categoryName": "咖啡饮品",
+        "sort": 99,
+        "typeList": [
+          {
+            "brandId": "64a4f5f170e7e30c1f004546",
+            "typeName": "星巴克",
+            "brandType": 3,
+            "logo": "/files/gift/2023/7/5/1688526210283_42601WTBF.jpg",
+            "link": null,
+            "mark": "",
+            "sort": 100
+          },
+          {
+            "brandId": "64a4f5f170e7e30c1f004547",
+            "typeName": "星巴克年卡",
+            "brandType": 3,
+            "logo": "/files/gift/2023/7/5/1688526210399_73961WTBF.jpg",
+            "link": null,
+            "mark": "",
+            "sort": 99
+          },
+          {
+            "brandId": "65efaf39d2e8e6484cecb1dc",
+            "typeName": "霸王茶姬",
+            "brandType": 3,
+            "logo": "/files/gift/2024/3/12/1710206759480_42321WTBF.jpg",
+            "link": null,
+            "mark": "",
+            "sort": 99
+          },
+          {
+            "brandId": "64a4f5f870e7e30c1f00476f",
+            "typeName": "瑞幸咖啡",
+            "brandType": 2,
+            "logo": "/files/gift/2023/7/5/1688526330189_90391WTBF.jpg",
+            "link": null,
+            "mark": "",
+            "sort": 98
+          },
+          {
+            "brandId": "64a4f5f170e7e30c1f00454b",
+            "typeName": "奈雪的茶",
+            "brandType": 3,
+            "logo": "/files/gift/2023/7/5/1688526211262_92791WTBF.jpg",
+            "link": null,
+            "mark": "",
+            "sort": 97
+          },
+          {
+            "brandId": "68bfe75a753ccd50a7dcecce",
+            "typeName": "古茗",
+            "brandType": 2,
+            "logo": "/files/gift/2025/9/9/1757407066876_22311WTBF.jpg",
+            "link": null,
+            "mark": "",
+            "sort": 95
+          },
+          {
+            "brandId": "6886e206c151797f790bf2fd",
+            "typeName": "CoCo都可",
+            "brandType": 2,
+            "logo": "/files/gift/2025/7/28/1753670150147_22171WTBF.jpg",
+            "link": null,
+            "mark": "",
+            "sort": 93
+          },
+          {
+            "brandId": "64a4f5f670e7e30c1f004566",
+            "typeName": "茶百道",
+            "brandType": 2,
+            "logo": "/files/gift/2023/7/5/1688526217015_84241WTBF.jpg",
+            "link": null,
+            "mark": "",
+            "sort": 89
+          },
+          {
+            "brandId": "65c1e525cb7d402f3a3ca106",
+            "typeName": "库迪咖啡",
+            "brandType": 2,
+            "logo": "/files/gift/2024/2/6/1707205925120_26041WTBF.jpg",
+            "link": null,
+            "mark": "",
+            "sort": 1
+          },
+          {
+            "brandId": "6886e86309f8817742d704fa",
+            "typeName": "喜茶",
+            "brandType": 2,
+            "logo": "/files/gift/2025/7/28/1753671779388_19901WTBF.jpg",
+            "link": null,
+            "mark": "",
+            "sort": 1
+          },
+          {
+            "brandId": "68bfdddf753ccd50a7dce9e8",
+            "typeName": "爷爷不泡茶",
+            "brandType": 2,
+            "logo": "/files/gift/2025/9/9/1757404639642_92211WTBF.jpg",
+            "link": null,
+            "mark": "",
+            "sort": 1
+          },
+          {
+            "brandId": "64a4f5f670e7e30c1f004577",
+            "typeName": "挪瓦咖啡",
+            "brandType": 3,
+            "logo": "/files/gift/2023/7/5/1688526220118_12391WTBF.jpg",
+            "link": null,
+            "mark": "",
+            "sort": 1
+          },
+          {
+            "brandId": "68bfe303753ccd50a7dceb9f",
+            "typeName": "茉莉奶白",
+            "brandType": 3,
+            "logo": "/files/gift/2025/9/9/1757405955608_53541WTBF.jpg",
+            "link": null,
+            "mark": "",
+            "sort": 1
+          }
+        ]
+      },
+      {
+        "categoryName": "餐饮美食",
+        "sort": 98,
+        "typeList": [
+          {
+            "brandId": "64a4f5f770e7e30c1f004665",
+            "typeName": "肯德基",
+            "brandType": 3,
+            "logo": "/files/gift/2023/7/5/1688526272995_46781WTBF.jpg",
+            "link": null,
+            "mark": "",
+            "sort": 100
+          },
+          {
+            "brandId": "64a4f5f770e7e30c1f004666",
+            "typeName": "麦当劳",
+            "brandType": 3,
+            "logo": "/files/gift/2023/7/5/1688526273115_96241WTBF.jpg",
+            "link": null,
+            "mark": "",
+            "sort": 99
+          },
+          {
+            "brandId": "64a4f5f770e7e30c1f004667",
+            "typeName": "汉堡王",
+            "brandType": 3,
+            "logo": "/files/gift/2023/7/5/1688526273255_53641WTBF.jpg",
+            "link": null,
+            "mark": "",
+            "sort": 98
+          },
+          {
+            "brandId": "64a4f5f770e7e30c1f00466c",
+            "typeName": "必胜客",
+            "brandType": 3,
+            "logo": "/files/gift/2023/7/5/1688526274063_48211WTBF.jpg",
+            "link": null,
+            "mark": "",
+            "sort": 94
+          },
+          {
+            "brandId": "64a4f5f770e7e30c1f00466d",
+            "typeName": "满记甜品",
+            "brandType": 3,
+            "logo": "/files/gift/2023/7/5/1688526274190_27201WTBF.jpg",
+            "link": null,
+            "mark": "",
+            "sort": 93
+          },
+          {
+            "brandId": "64a4f5f770e7e30c1f00466f",
+            "typeName": "来伊份",
+            "brandType": 3,
+            "logo": "/files/gift/2023/7/5/1688526274616_73811WTBF.jpg",
+            "link": null,
+            "mark": "",
+            "sort": 92
+          },
+          {
+            "brandId": "64a4f5f770e7e30c1f004672",
+            "typeName": "百果园",
+            "brandType": 3,
+            "logo": "/files/gift/2023/7/5/1688526275003_67091WTBF.jpg",
+            "link": null,
+            "mark": "",
+            "sort": 89
+          },
+          {
+            "brandId": "64a4f5f870e7e30c1f004771",
+            "typeName": "呷哺呷哺",
+            "brandType": 2,
+            "logo": "/files/gift/2023/7/5/1688526330683_65991WTBF.jpg",
+            "link": null,
+            "mark": "",
+            "sort": 88
+          },
+          {
+            "brandId": "64a4f5f770e7e30c1f004676",
+            "typeName": "良品铺子",
+            "brandType": 3,
+            "logo": "/files/gift/2023/7/5/1688526275985_91181WTBF.jpg",
+            "link": null,
+            "mark": "",
+            "sort": 87
+          },
+          {
+            "brandId": "64a4f5f770e7e30c1f004677",
+            "typeName": "德克士",
+            "brandType": 3,
+            "logo": "/files/gift/2023/7/5/1688526276113_97771WTBF.jpg",
+            "link": null,
+            "mark": "上新",
+            "sort": 86
+          },
+          {
+            "brandId": "64a4f5f770e7e30c1f004689",
+            "typeName": "华莱士",
+            "brandType": 3,
+            "logo": "/files/gift/2023/7/5/1688526279998_95921WTBF.jpg",
+            "link": null,
+            "mark": "",
+            "sort": 84
+          },
+          {
+            "brandId": "64a4f5f770e7e30c1f00468e",
+            "typeName": "特惠点单年卡",
+            "brandType": 3,
+            "logo": "/files/gift/2023/7/5/1688526280974_81WTBF.jpg",
+            "link": null,
+            "mark": "",
+            "sort": 83
+          }
+        ]
+      },
+      {
+        "categoryName": "外卖团购",
+        "sort": 97,
+        "typeList": [
+          {
+            "brandId": "64a4f5f870e7e30c1f00475b",
+            "typeName": "美团外卖",
+            "brandType": 2,
+            "logo": "/files/gift/2023/7/12/1689152111364_23531WTBF.jpg",
+            "link": null,
+            "mark": "",
+            "sort": 100
+          },
+          {
+            "brandId": "64a4f5f870e7e30c1f004710",
+            "typeName": "美团",
+            "brandType": 2,
+            "logo": "/files/gift/2023/7/5/1688526310253_39891WTBF.jpg",
+            "link": null,
+            "mark": "",
+            "sort": 99
+          },
+          {
+            "brandId": "64a4f5f870e7e30c1f00475e",
+            "typeName": "饿了么",
+            "brandType": 2,
+            "logo": "/files/gift/2023/7/5/1688526327037_58461WTBF.jpg",
+            "link": null,
+            "mark": "",
+            "sort": 99
+          },
+          {
+            "brandId": "64a4f5f770e7e30c1f0045d1",
+            "typeName": "猫眼电影",
+            "brandType": 3,
+            "logo": "/files/gift/2023/7/5/1688526237307_45841WTBF.jpg",
+            "link": null,
+            "mark": "HOT",
+            "sort": 97
+          },
+          {
+            "brandId": "64a4f5f870e7e30c1f004763",
+            "typeName": "外卖加量包",
+            "brandType": 2,
+            "logo": "/files/gift/2023/7/5/1688526328145_57661WTBF.jpg",
+            "link": null,
+            "mark": "",
+            "sort": 95
+          },
+          {
+            "brandId": "64a4f5f770e7e30c1f0045d9",
+            "typeName": "万达影城",
+            "brandType": 3,
+            "logo": "/files/gift/2023/7/5/1688526238879_15831WTBF.jpg",
+            "link": null,
+            "mark": "",
+            "sort": 94
+          }
+        ]
+      },
+      {
+        "categoryName": "出行车服",
+        "sort": 95,
+        "typeList": [
+          {
+            "brandId": "64a4f5f670e7e30c1f0045ab",
+            "typeName": "曹操出行",
+            "brandType": 3,
+            "logo": "/files/gift/2023/7/5/1688526229702_79311WTBF.jpg",
+            "link": null,
+            "mark": "",
+            "sort": 98
+          },
+          {
+            "brandId": "64a4f5f870e7e30c1f00475d",
+            "typeName": "滴滴青桔",
+            "brandType": 2,
+            "logo": "/files/gift/2023/7/5/1688526326824_69471WTBF.jpg",
+            "link": null,
+            "mark": "NEW",
+            "sort": 97
+          },
+          {
+            "brandId": "64a4f5f870e7e30c1f00475c",
+            "typeName": "美团单车",
+            "brandType": 2,
+            "logo": "/files/gift/2023/7/5/1688526326710_74211WTBF.jpg",
+            "link": null,
+            "mark": "NEW",
+            "sort": 96
+          },
+          {
+            "brandId": "64a4f5f770e7e30c1f0045be",
+            "typeName": "高德打车",
+            "brandType": 3,
+            "logo": "/files/gift/2023/7/5/1688526233678_92081WTBF.jpg",
+            "link": null,
+            "mark": "",
+            "sort": 94
+          },
+          {
+            "brandId": "64a4f5f870e7e30c1f004764",
+            "typeName": "滴滴出行",
+            "brandType": 2,
+            "logo": "/files/gift/2023/7/5/1688526328283_73981WTBF.jpg",
+            "link": null,
+            "mark": "",
+            "sort": 9
+          }
+        ]
+      },
+      {
+        "categoryName": "知识阅读",
+        "sort": 93,
+        "typeList": [
+          {
+            "brandId": "64a4f5f870e7e30c1f00474d",
+            "typeName": "掌阅",
+            "brandType": 2,
+            "logo": "/files/gift/2023/7/5/1688526324115_7521WTBF.jpg",
+            "link": null,
+            "mark": "",
+            "sort": 100
+          },
+          {
+            "brandId": "64a4f5f870e7e30c1f00476d",
+            "typeName": "百度网盘",
+            "brandType": 2,
+            "logo": "/files/gift/2023/7/5/1688526329850_86321WTBF.jpg",
+            "link": null,
+            "mark": "限时",
+            "sort": 100
+          },
+          {
+            "brandId": "64a4f5f870e7e30c1f00474e",
+            "typeName": "凯叔讲故事",
+            "brandType": 2,
+            "logo": "/files/gift/2023/7/5/1688526324245_1531WTBF.jpg",
+            "link": null,
+            "mark": "",
+            "sort": 99
+          },
+          {
+            "brandId": "64a4f5f870e7e30c1f004756",
+            "typeName": "樊登读书",
+            "brandType": 2,
+            "logo": "/files/gift/2023/7/5/1688526325625_50831WTBF.jpg",
+            "link": null,
+            "mark": "",
+            "sort": 96
+          },
+          {
+            "brandId": "64a4f5f870e7e30c1f00474f",
+            "typeName": "知乎",
+            "brandType": 2,
+            "logo": "/files/gift/2023/7/5/1688526324390_32511WTBF.jpg",
+            "link": null,
+            "mark": "",
+            "sort": 95
+          },
+          {
+            "brandId": "64a4f5f870e7e30c1f004750",
+            "typeName": "QQ阅读",
+            "brandType": 2,
+            "logo": "/files/gift/2023/7/5/1688526324562_2781WTBF.jpg",
+            "link": null,
+            "mark": "",
+            "sort": 1
+          },
+          {
+            "brandId": "64a4f5f870e7e30c1f004753",
+            "typeName": "百度文库",
+            "brandType": 2,
+            "logo": "/files/gift/2023/7/5/1688526325099_15101WTBF.jpg",
+            "link": null,
+            "mark": "",
+            "sort": 1
+          },
+          {
+            "brandId": "65c1efd6cb7d402f3a3caed6",
+            "typeName": "豆瓣阅读",
+            "brandType": 2,
+            "logo": "/files/gift/2024/2/6/1707208662541_9571WTBF.jpg",
+            "link": null,
+            "mark": "",
+            "sort": 1
+          },
+          {
+            "brandId": "666e8ecca04e5b28c95f824d",
+            "typeName": "腾讯文档",
+            "brandType": 2,
+            "logo": "/files/gift/2024/6/16/1718521548950_64401WTBF.jpg",
+            "link": null,
+            "mark": "",
+            "sort": 1
+          },
+          {
+            "brandId": "66d66bffefcad62e3fac5cd3",
+            "typeName": "网易有道词典",
+            "brandType": 2,
+            "logo": "/files/gift/2024/9/3/1725328383068_6901WTBF.jpg",
+            "link": null,
+            "mark": "",
+            "sort": 1
+          },
+          {
+            "brandId": "672889f207f35534a434a7b8",
+            "typeName": "书旗小说",
+            "brandType": 2,
+            "logo": "/files/gift/2024/11/4/1730710002126_91701WTBF.jpg",
+            "link": null,
+            "mark": "",
+            "sort": 1
+          }
+        ]
+      },
+      {
+        "categoryName": "生活工具",
+        "sort": 92,
+        "typeList": [
+          {
+            "brandId": "64a4f5f870e7e30c1f00471d",
+            "typeName": "e袋洗",
+            "brandType": 2,
+            "logo": "/files/gift/2023/7/5/1688526313060_44691WTBF.jpg",
+            "link": null,
+            "mark": "",
+            "sort": 99
+          },
+          {
+            "brandId": "64a4f5f770e7e30c1f0045f5",
+            "typeName": "知网",
+            "brandType": 3,
+            "logo": "/files/gift/2023/7/5/1688526245408_5861WTBF.jpg",
+            "link": null,
+            "mark": "",
+            "sort": 99
+          },
+          {
+            "brandId": "64a4f5f770e7e30c1f004633",
+            "typeName": "货拉拉",
+            "brandType": 3,
+            "logo": "/files/gift/2023/7/5/1688526260494_69231WTBF.jpg",
+            "link": null,
+            "mark": "",
+            "sort": 99
+          },
+          {
+            "brandId": "64a4f5f770e7e30c1f0045f6",
+            "typeName": "印鸽",
+            "brandType": 3,
+            "logo": "/files/gift/2023/7/5/1688526245765_58801WTBF.jpg",
+            "link": null,
+            "mark": "",
+            "sort": 98
+          },
+          {
+            "brandId": "64a4f5f770e7e30c1f00463e",
+            "typeName": "速回收",
+            "brandType": 3,
+            "logo": "/files/gift/2023/7/5/1688526263185_42241WTBF.jpg",
+            "link": null,
+            "mark": "",
+            "sort": 98
+          },
+          {
+            "brandId": "64a4f5f770e7e30c1f004611",
+            "typeName": "小电充电",
+            "brandType": 3,
+            "logo": "/files/gift/2023/7/5/1688526252010_87851WTBF.jpg",
+            "link": null,
+            "mark": "",
+            "sort": 96
+          },
+          {
+            "brandId": "64a4f5f770e7e30c1f004626",
+            "typeName": "星星充电",
+            "brandType": 3,
+            "logo": "/files/gift/2023/7/5/1688526256938_82781WTBF.jpg",
+            "link": null,
+            "mark": "",
+            "sort": 91
+          },
+          {
+            "brandId": "64a4f5f870e7e30c1f00471f",
+            "typeName": "每日瑜伽",
+            "brandType": 2,
+            "logo": "/files/gift/2023/7/5/1688526313494_13311WTBF.jpg",
+            "link": null,
+            "mark": "",
+            "sort": 1
+          },
+          {
+            "brandId": "6723225d23caa651aa15c690",
+            "typeName": "剪映",
+            "brandType": 2,
+            "logo": "/files/gift/2025/9/9/1757405666505_58821WTBF.jpg",
+            "link": null,
+            "mark": "",
+            "sort": 1
+          }
+        ]
+      },
+      {
+        "categoryName": "商超购物",
+        "sort": 91,
+        "typeList": [
+          {
+            "brandId": "64d48cee8727ed6847af3b7e",
+            "typeName": "天虹",
+            "brandType": 3,
+            "logo": "/files/gift/2023/8/14/1691997271269_20891WTBF.jpg",
+            "link": null,
+            "mark": "上新",
+            "sort": 101
+          },
+          {
+            "brandId": "64a4f5f870e7e30c1f00472b",
+            "typeName": "京东plus",
+            "brandType": 2,
+            "logo": "/files/gift/2023/7/5/1688526316016_39791WTBF.jpg",
+            "link": null,
+            "mark": "",
+            "sort": 99
+          },
+          {
+            "brandId": "64a4f5f770e7e30c1f004640",
+            "typeName": "京东E卡",
+            "brandType": 3,
+            "logo": "/files/gift/2023/7/5/1688526263529_71001WTBF.jpg",
+            "link": null,
+            "mark": "",
+            "sort": 99
+          },
+          {
+            "brandId": "64a4f5f770e7e30c1f004649",
+            "typeName": "永辉超市",
+            "brandType": 3,
+            "logo": "/files/gift/2023/7/5/1688526265423_12301WTBF.jpg",
+            "link": null,
+            "mark": "",
+            "sort": 98
+          },
+          {
+            "brandId": "64a4f5f770e7e30c1f00464a",
+            "typeName": "沃尔玛",
+            "brandType": 3,
+            "logo": "/files/gift/2023/7/5/1688526265555_40001WTBF.jpg",
+            "link": null,
+            "mark": "",
+            "sort": 97
+          },
+          {
+            "brandId": "64a4f5f770e7e30c1f00464b",
+            "typeName": "盒马",
+            "brandType": 3,
+            "logo": "/files/gift/2023/7/5/1688526265695_28751WTBF.jpg",
+            "link": null,
+            "mark": "",
+            "sort": 96
+          },
+          {
+            "brandId": "64a4f5f770e7e30c1f00464c",
+            "typeName": "屈臣氏",
+            "brandType": 3,
+            "logo": "/files/gift/2023/7/5/1688526265830_93541WTBF.jpg",
+            "link": null,
+            "mark": "",
+            "sort": 95
+          },
+          {
+            "brandId": "64a4f5f770e7e30c1f004651",
+            "typeName": "叮咚买菜",
+            "brandType": 3,
+            "logo": "/files/gift/2023/7/5/1688526267923_79611WTBF.jpg",
+            "link": null,
+            "mark": "",
+            "sort": 94
+          },
+          {
+            "brandId": "64a4f5f770e7e30c1f004655",
+            "typeName": "朴朴超市",
+            "brandType": 3,
+            "logo": "/files/gift/2023/7/5/1688526269137_66341WTBF.jpg",
+            "link": null,
+            "mark": "",
+            "sort": 93
+          },
+          {
+            "brandId": "64a4f5f770e7e30c1f004647",
+            "typeName": "天猫",
+            "brandType": 3,
+            "logo": "/files/gift/2023/7/5/1688526264995_50631WTBF.jpg",
+            "link": null,
+            "mark": "",
+            "sort": 5
+          }
+        ]
+      }
+    ],
+    "homeMidFoodGroup": null,
+    "homeMidLimitSale": null,
+    "qyDhRender": null,
+    "zxggRender": null,
+    "noticeRender": null
+  },
+  "count": null,
+  "integers": null,
+  "token": "444ef97a-14f4-47d8-bc17-a3d285e83f5a",
+  "currentPage": null,
+  "pageSize": null,
+  "pageCount": null,
+  "total": null,
+  "totalRow": null
+}

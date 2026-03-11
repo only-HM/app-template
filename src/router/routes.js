@@ -58,6 +58,12 @@ export const routes = [
     meta: { requiresAuth: true },
   },
   {
+    path: '/wednesdayHome2',
+    name: 'WednesdayHome2',
+    component: () => import('@/views/WednesdayHome/index2.vue'),
+    meta: { requiresAuth: true },
+  },
+  {
     path: '/luckyDraw',
     name: 'LuckyDraw',
     component: () => import('@/views/LuckyDraw/index.vue'),
@@ -85,6 +91,12 @@ export const routes = [
     path: '/openRedPacket3',
     name: 'OpenRedPacket3',
     component: () => import('@/views/OpenRedPacket/OpenRedPacket3.vue'),
+    meta: { requiresAuth: true },
+  },
+  {
+    path: '/lifeDiscounts',
+    name: 'LifeDiscounts',
+    component: () => import('@/views/LifeDiscounts/index.vue'),
     meta: { requiresAuth: true },
   },
   {

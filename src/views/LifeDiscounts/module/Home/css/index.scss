@@ -1,0 +1,14 @@
+.home-container {
+  padding-top: var(--gap);
+  padding-left: calc(var(--gap) * 1.5);
+  padding-right: calc(var(--gap) * 1.5);
+  padding-bottom: calc(var(--gap) * 2);
+
+  .my-tabs :deep(.van-tab) {
+    font-size: 1.1rem;
+  }
+
+  .my-tabs :deep(.van-tabs__wrap) {
+    margin-bottom: calc(var(--gap) * 2);
+  }
+}

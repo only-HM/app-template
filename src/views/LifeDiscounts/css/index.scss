@@ -1,0 +1,13 @@
+.life-discounts-container {
+  width: var(--life-discounts-width);
+  height: var(--life-discounts-height);
+
+  .app-enter {
+    height: var(--app-enter-height);
+    overflow-y: scroll;
+  }
+
+  :deep(.van-tabbar) {
+    box-shadow: 0 0 15px 1px rgba(0, 0, 0, .1);
+  }
+}

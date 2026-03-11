@@ -1,0 +1,20 @@
+.classify-container {
+  --sidebar-width: 90px;
+
+  height: calc(100vh - var(--my-tabbar-height));
+
+  .van-sidebar {
+    width: var(--sidebar-width);
+  }
+
+  .van-sidebar-item {
+    height: 50px;
+    font-size: .85rem;
+  }
+
+  .exhibition {
+    height: 100%;
+    flex: 1;
+    overflow-y: scroll;
+  }
+}
